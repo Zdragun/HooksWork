@@ -1,12 +1,14 @@
 import './App.css';
 import { UseEfferctHook } from './components/UseEfferctHook';
 import UseReducerHook from './components/UseReducerHook';
+import { UseRefHook } from './components/UseRefHook';
 function App() {
   return (
     <div className="App">
-      Some Info
+      <h1>Title</h1>
    {/*  <UseReducerHook/> */}
-    <UseEfferctHook/>
+{/*     <UseEfferctHook/> */}
+    <UseRefHook/>
     </div>
   );
 }
