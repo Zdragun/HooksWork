@@ -1,23 +1,26 @@
-import React,{useState} from 'react'
+import React,{useState,useRef} from 'react'
 
 export const UseRefHook = () => {
-    const [numbers,setNumbers] = useState([1])
-
-    const addNumber =() =>
+/*     const [numbers,setNumbers] = useState([1])] */
+    const [state,setState] = useState([])
+    const inpRef = useRef(null);
+    
+    const onClick = () =>
     {
-        const lastNumber = numbers.at(-1)
-        console.log(lastNumber);
-        setNumbers([...numbers,lastNumber + 1])
+       console.log(inpRef.current.value);
+       setState(inpRef.current.value)
     }
+   
   return (
     
     <div>
-        <ul>
-            {numbers.map((number)=>(
-                <li key={number}>{number}</li>
-            ))}
-        </ul>
-        <button onClick={addNumber}>add Number</button>
+     <input  ref={inpRef} type="text" placeholder='Type Text' />  
+    
+    <button onClick={onClick} >add Number</button>
+    <ul >
+    <li>{state}</li>
+    </ul>
+   
         </div>
   )
 }
