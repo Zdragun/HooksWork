@@ -1,6 +1,8 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import { AppContext } from '../components/ContextHooks'
 
-const Login = ({setUsername}) => {
+const Login = () => {
+    const {setUsername} = useContext(AppContext)
   return (
     <div>
         <input 
