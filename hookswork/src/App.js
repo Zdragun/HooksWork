@@ -3,6 +3,7 @@ import ContextHooks from './components/ContextHooks';
 import { UseEfferctHook } from './components/UseEfferctHook';
 import UseReducerHook from './components/UseReducerHook';
 import { UseRefHook } from './components/UseRefHook';
+import MemoTutorial from './components/UseMemoHook';
 function App() {
   return (
     <div className="App">
@@ -11,7 +12,8 @@ function App() {
 {/*     <UseEfferctHook/> */}
 {/*     <UseRefHook/> */}
     <ContextHooks/>
-    </div>
+<MemoTutorial/>   
+</div>
   );
 }
 
