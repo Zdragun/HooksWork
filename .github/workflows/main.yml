@@ -22,3 +22,4 @@ jobs:
         npm run lint:js
         npm run build
         npm test
+      working-directory: client
